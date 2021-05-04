@@ -24,8 +24,10 @@ UI should be desirable, but we don't want a prefect design either. As for state 
 9. end chat
 10. provide peer username & connect
 11. go to chat page
-12. send message to peer
-13. close app
+12. disconnect network
+13. send message to peer (should be queued)
+14. connect network (message should automatically be sent to peer)
+15. close app
 
 
 ## Expectations
