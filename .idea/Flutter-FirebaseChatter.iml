@@ -3,9 +3,13 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/chatapp/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/FlutterChatAppTutorial/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/FlutterChatAppTutorial/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/FlutterChatAppTutorial/build" />
       <excludeFolder url="file://$MODULE_DIR$/chatapp/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/chatapp/build" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_chat_app/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_chat_app/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/flutter_chat_app/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
