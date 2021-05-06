@@ -91,7 +91,7 @@ class _SignInState extends State<SignIn> {
                         TextFormField(
                           obscureText: true,
                           validator: (val) {
-                            return val.length > 6
+                            return val.length >=6
                                 ? null
                                 : "Enter Password 6+ characters";
                           },
@@ -153,7 +153,7 @@ class _SignInState extends State<SignIn> {
                   SizedBox(
                     height: 16,
                   ),
-                  Container(
+                  /*Container(
                     padding: EdgeInsets.symmetric(vertical: 16),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
@@ -165,7 +165,7 @@ class _SignInState extends State<SignIn> {
                           TextStyle(fontSize: 17, color: CustomTheme.textColor),
                       textAlign: TextAlign.center,
                     ),
-                  ),
+                  ),*/
                   SizedBox(
                     height: 16,
                   ),
