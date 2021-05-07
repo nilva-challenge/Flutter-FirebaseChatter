@@ -1,12 +1,14 @@
-import 'package:chatapp/helper/authenticate.dart';
-import 'package:chatapp/helper/constants.dart';
-import 'package:chatapp/helper/helperfunctions.dart';
-import 'package:chatapp/helper/theme.dart';
-import 'package:chatapp/services/auth.dart';
-import 'package:chatapp/services/database.dart';
-import 'package:chatapp/views/chat.dart';
-import 'package:chatapp/views/search.dart';
+import 'package:chatapp/feature/data/services/auth.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../core/helper/authenticate.dart';
+import '../../../../core/helper/constants.dart';
+import '../../../../core/shared_preferences/helperfunctions.dart';
+import '../../../../core/values/theme.dart';
+
+import '../../../data/database/database.dart';
+import 'chat.dart';
+import 'search.dart';
 
 class ChatRoom extends StatefulWidget {
   @override
@@ -30,7 +32,8 @@ class _ChatRoomState extends State<ChatRoom> {
                         .toString()
                         .replaceAll("_", "")
                         .replaceAll(Constants.myName, ""),
-                    chatRoomId: snapshot.data.documents[index].data["chatRoomId"],
+                    chatRoomId:
+                        snapshot.data.documents[index].data["chatRoomId"],
                   );
                 })
             : Container();
@@ -96,17 +99,18 @@ class ChatRoomsTile extends StatelessWidget {
   final String userName;
   final String chatRoomId;
 
-  ChatRoomsTile({this.userName,@required this.chatRoomId});
+  ChatRoomsTile({this.userName, @required this.chatRoomId});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
-        Navigator.push(context, MaterialPageRoute(
-          builder: (context) => Chat(
-            chatRoomId: chatRoomId,
-          )
-        ));
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => Chat(
+                      chatRoomId: chatRoomId,
+                    )));
       },
       child: Container(
         color: Colors.black26,
